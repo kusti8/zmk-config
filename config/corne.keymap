@@ -23,6 +23,12 @@
             layers = <0>;
             bindings = <&kp TAB>;
         };
+        combo_btclr {
+            timeout-ms = <50>;
+            key-positions = < 12 13 >;
+            layers = <1>;
+            bindings = <&bt BT_CLR>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -43,12 +49,12 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |      | BC  | LFT | RGT | UP  | [   |   |  ]  | DWN |  UP | RGT |     | \ |
+// |      |     | LFT | RGT | UP  | [   |   |  ]  | DWN |  UP | RGT |     | \ |
 // |      | BT1 | BT2 | BT3 | DWN |  {  |   |  }  |     |     |     |     |      |
 //                    | GUI |     |     |   |     |     | GRAVE |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BKSP
-   &trans    &bt BT_CLR       &kp LEFT     &kp RIGHT    &kp UP       &kp LBKT       &kp RBKT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &trans    &trans       &kp LEFT     &kp RIGHT    &kp UP       &kp LBKT       &kp RBKT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp DOWN     &kp LBRC       &kp RBRC   &trans   &trans &trans    &trans &trans
                           	        &kp LGUI     &trans       &trans             &trans   &trans   &kp GRAVE
                         >;
