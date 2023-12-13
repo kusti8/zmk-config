@@ -25,9 +25,21 @@
         };
         combo_btclr {
             timeout-ms = <50>;
-            key-positions = < 12 13 >;
+            key-positions = < 12 13 >; // middle row, left 2
             layers = <1>;
             bindings = <&bt BT_CLR>;
+        };
+        combo_suspendleft {
+            timeout-ms = <50>;
+            key-positions = < 0 12 >; // top left and one below it
+            layers = <1 2>;
+            bindings = <&suspend>;
+        };
+        combo_suspendright {
+            timeout-ms = <50>;
+            key-positions = < 11 23 >; // top right and one below it
+            layers = <1 2>;
+            bindings = <&suspend>;
         };
     };
         keymap {
